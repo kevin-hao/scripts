@@ -50,9 +50,9 @@ if __name__ == '__main__':
         exit("主机组不存在")
 
     """添加监控主机"""
-    hosts = "10.0.1.10"
+    hosts = "10.0.1.11"
     add_host = Host(url=url, headers=headers, token=token)
-    ret = add_host.AddHost(host=hosts, templateId=tids, hostGroupId=grouIds)
+    ret = add_host.AddHost(host=hosts, templateId=tempIds, hostGroupId=grouIds)
     if ret.get('code'):
         exit(ret.get('data')[0]['result'])
     else:
